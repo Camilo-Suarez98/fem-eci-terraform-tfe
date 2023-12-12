@@ -12,11 +12,11 @@ locals {
       vcs_repo_identifier = "${var.github_organization_name}/fem-eci-terraform-tfe"
     }
 
-    "fem-eci-github" = {
-      description         = "Example automation workspace for GitHub resources"
-      execution_mode      = "remote"
+    "fem-eci-github-tfe" = {
+      description         = "Example automation workspace for second GitHub repo resources"
+      execution_mode      = "local"
       project_id          = module.project["fem-eci-project"].id
-      vcs_repo_identifier = "${var.github_organization_name}/fem-eci-terraform-github"
+      vcs_repo_identifier = "${var.github_organization_name}/fem-eci-terraform-github-tfe"
     }
   }
 }
